@@ -46,7 +46,7 @@
               <img src="/js/baidu.svg" alt="Baidu"/>
           </a>
         <div class="text">
-          <h1>Welcome to baidu!</h1>
+          <h1>Welcome to baidu ningzhefeng!!!!</h1>
 		  <h2>${name}</h2>
         </div>
       </div>
