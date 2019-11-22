@@ -1,17 +1,3 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: demo-spring-app
-  labels:
-    app: demo-spring-app
-spec:
-  clusterIP: None
-  ports:
-    - port: 8080
-      name: demo-spring-app
-  selector:
-    app: demo-spring-app
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
