@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-spring-app
+  labels:
+    app: demo-spring-app
+spec:
+  clusterIP: None
+  ports:
+    - port: 8080
+      name: demo-spring-app
+  selector:
+    app: demo-spring-app
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-spring-app
+  labels:
+    app: demo-spring-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-spring-app
+  template:
+    metadata:
+      labels:
+        app: demo-spring-app
+    spec:
+      containers:
+      - name: demo-spring-app
+        image: registry.cn-hongkong.aliyuncs.com/waltertest/waltertest
+        ports:
+        - containerPort: 8080
